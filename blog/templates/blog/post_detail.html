@@ -1,14 +1,20 @@
 {% extends 'blog/base.html' %}
+
 {% block content %}
-    <div class="container content">
-        <div class="post">
-            {% if post.published_date %}
-                <div class="published-date">
-                    {{ post.published_date }}
-                </div>
-            {% endif %}
-            <h1>{{ post.title }}</h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <article class="post">
+                    {% if post.published_date %}
+                        <div class="published-date">
+                            {{ post.published_date }}
+                        </div>
+                    {% endif %}
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </article>
+            </div>
         </div>
     </div>
 {% endblock %}
